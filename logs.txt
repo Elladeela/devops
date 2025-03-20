@@ -1758,3 +1758,38 @@ c9ce8cb4e76a: Layer already exists
 latest: digest: sha256:9ec4cceffeba83c71bbdd3b269a77f0aec20001402a3eda967862af5c9400f91 size: 2404
 okerekeella
 Dockerfile exists already
+Stopping any previuosly running container ... Please wait...
+Running basic cleanups ...
+Running your container ... ---------------------------
+Application deployed successfully!
+Pushing the image to Docker Hub ...
+Login Succeeded
+The push refers to repository [docker.io/okerekeella/myimage]
+5f70bf18a086: Preparing
+414e4c69f00e: Preparing
+c18897d5e3dd: Preparing
+9af9e76ea07f: Preparing
+f1f70b13aacc: Preparing
+252b6db79fae: Preparing
+c9ce8cb4e76a: Preparing
+8f3c313eb124: Preparing
+c1761f3c364a: Preparing
+08000c18d16d: Preparing
+8f3c313eb124: Waiting
+c1761f3c364a: Waiting
+08000c18d16d: Waiting
+252b6db79fae: Waiting
+c9ce8cb4e76a: Waiting
+9af9e76ea07f: Layer already exists
+414e4c69f00e: Layer already exists
+f1f70b13aacc: Layer already exists
+5f70bf18a086: Layer already exists
+c18897d5e3dd: Layer already exists
+c1761f3c364a: Layer already exists
+252b6db79fae: Layer already exists
+08000c18d16d: Layer already exists
+c9ce8cb4e76a: Layer already exists
+8f3c313eb124: Layer already exists
+latest: digest: sha256:9ec4cceffeba83c71bbdd3b269a77f0aec20001402a3eda967862af5c9400f91 size: 2404
+okerekeella
+Dockerfile exists already
