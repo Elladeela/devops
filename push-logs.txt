@@ -44,3 +44,13 @@ Changes not staged for commit:
 	modified:   push-logs.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[master afba882] updated project
+ 2 files changed, 45 insertions(+)
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   logs.txt
+	modified:   push-logs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
