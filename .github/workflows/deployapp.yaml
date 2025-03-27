@@ -26,9 +26,14 @@ jobs:
           ls ubuntu-latest
       - name: "Build Docker image"
         run:
-          docker build -t sampleapp123 .
+          docker build -t ${{secrets.DOCKERHUB_USERNAME}}/sampleapp123 .
           # . is because we have checked out into the root directory which already has he docker file
         
-       
+      - name: "login to DockerHub"
+        run:
+          docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{ secrets.DOCKERHUB_PASSWORD}}
           
+      - name: "Push to DockerHub"
+        run:
+          docker push ${{secrets.DOCKERHUB_USERNAME}}/Sampleapp123
         
