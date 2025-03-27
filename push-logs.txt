@@ -283,3 +283,14 @@ Untracked files:
 	.github/
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[master 6ddd100] updated project
+ 3 files changed, 48 insertions(+)
+ create mode 100644 .github/workflows/deployapp.yaml
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   logs.txt
+	modified:   push-logs.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
