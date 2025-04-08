@@ -3263,3 +3263,5 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 [master 3739e77] updated project
  2 files changed, 13 insertions(+), 2 deletions(-)
+On branch master
+nothing to commit, working tree clean
