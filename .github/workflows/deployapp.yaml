@@ -1,39 +1,101 @@
-# name of the file
-# name:
-# # trigger
+# # name of the file
+# # name:
+# # # trigger
+# # on:
+# # # jobs you will  be running
+# # jobs:
+# name: Deploy a simple application
 # on:
-# # jobs you will  be running
+#   push:
+#     branches:
+#       - master
+
 # jobs:
-name: Deploy a simple application
-on:
-  push:
-    branches:
-      - master
+#   deploy_application_job:
+#     runs-on: ubuntu-latest
+#     name: Build and Deploy
+#     steps:
+#       - name: "say hello"
+#         run: |
+#           echo "Hello everyone!"
+#       - name: Checkout from .github directory
+#         uses: actions/checkout@v4
 
-jobs:
-  deploy_application_job:
-    runs-on: ubuntu-latest
-    name: Build and Deploy
-    steps:
-      - name: "say hello"
-        run: |
-          echo "Hello everyone!"
-      - name: Checkout from .github directory
-        uses: actions/checkout@v4
-
-      - name: "List directory 2"
-        run:
-          ls ubuntu-latest
-      - name: "Build Docker image"
-        run:
-          docker build -t ${{secrets.DOCKERHUB_USERNAME}}/sampleapp123 .
-          # . is because we have checked out into the root directory which already has he docker file
+#       - name: "List directory 2"
+#         run:
+#           ls ubuntu-latest
+#       - name: "Build Docker image"
+#         run:
+#           docker build -t ${{secrets.DOCKERHUB_USERNAME}}/sampleapp123 .
+#           # . is because we have checked out into the root directory which already has he docker file
         
-      - name: "login to DockerHub"
-        run:
-          docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{ secrets.DOCKERHUB_PASSWORD}}
+#       - name: "login to DockerHub"
+#         run:
+#           docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{ secrets.DOCKERHUB_PASSWORD}}
           
-      - name: "Push to DockerHub"
-        run:
-          docker push ${{secrets.DOCKERHUB_USERNAME}}/Sampleapp123
+#       - name: "Push to DockerHub"
+#         run:
+#           docker push ${{secrets.DOCKERHUB_USERNAME}}/Sampleapp123
+
+#       - name: Configure AWS credentials
+#         uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws-region: us-east-1
+
+#       - name: Login to Amazon ECR
+#         id: login-ecr
+#         uses: aws-actions/amazon-ecr-login@v1
+#       - name: Build, tag 2, and push docker image to Amazon ECR
+#            env:
+#              REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+#              REPOSITORY: whateverregistry
+#              IMAGE_TAG: sampleapp124
+#         run: |
+#              docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+#              docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+#          # - name: Build, tag 2, and push docker image to Amazon ECR
+#          #   env:
+#          #     REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+#          #     REPOSITORY: whateverregistry
+#          #     IMAGE_TAG: sampleapp124
+#          #   run: |
+#          #     docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
+#          #     docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
+
+
+
+name: Deploy a simple application 
+on: 
+    push:
+        branches:
+        - master
+jobs:
+    deploy_application_job:
+        runs-on: self-hosted
+        steps:
+        - name: "say hello again"
+          run: |
+            echo "Hello everyone!"
+        - name: "List directory 1"
+          run: |
+            ls -la
+
+        - name: Checkout from .github directory
+          uses: actions/checkout@v4
+
+        - name: Create a new directory
+          run: |
+            mkdir testdir anotherdir
+          
+        - name: "List directory 2"
+          run: |
+            ls -la
+
+        
+
+  
+
+
         
