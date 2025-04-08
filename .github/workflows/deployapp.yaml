@@ -87,9 +87,9 @@ jobs:
 
         - name: Create a new directory
           run: |
-            mkdir testdir anotherdir
+            mkdir testdir elladir
           
-        - name: "List directory 2"
+        - name: "List directory  2"
           run: |
             ls -la
 
