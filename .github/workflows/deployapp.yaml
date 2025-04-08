@@ -87,7 +87,7 @@ jobs:
 
         - name: Create a new directory
           run: |
-            mkdir testdir elladir
+            mkdir testdir elladirec
           
         - name: "List directory  2"
           run: |

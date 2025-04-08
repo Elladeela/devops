@@ -3436,3 +3436,11 @@ Changes not staged for commit:
 	modified:   push-logs.txt
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[master ee20d25] updated project
+ 1 file changed, 9 insertions(+)
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   .github/workflows/deployapp.yaml
+	modified:   push-logs.txt
+
